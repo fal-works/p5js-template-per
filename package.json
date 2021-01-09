@@ -1,0 +1,15 @@
+{
+  "license": "CC0-1.0",
+  "private": true,
+  "devDependencies": {
+    "eslint": "^7.17.0",
+    "eslint-config-prettier": "^7.1.0",
+    "prettier": "^2.2.1",
+    "rollup": "^2.36.1"
+  },
+  "scripts": {
+    "build": "npm run bundle && npm run format:dist",
+    "bundle": "rollup --config",
+    "format:dist": "prettier --write dist/**/*.js"
+  }
+}

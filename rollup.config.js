@@ -1,0 +1,24 @@
+// See also: https://rollupjs.org/
+
+const banner = `/**
+ * This is a p5.js sketch made with p5js-template-2.
+ *
+ * @license CC0-1.0
+ */
+`;
+
+const config = {
+  input: "src/main.js",
+  output: {
+    format: "iife",
+    file: "dist/script.js",
+    banner,
+    interop: "default",
+    globals: {
+      p5: "p5",
+    },
+  },
+  external: ["p5"],
+};
+
+export default config;

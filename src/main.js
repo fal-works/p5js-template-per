@@ -1,4 +1,6 @@
-import p5 from "p5";
-import { sketch } from "./sketch";
+import { setup } from "./setup";
+import { draw } from "./draw";
 
-new p5(sketch);
+// Expose the setup/draw functions to the global scope, because
+// the entire code will be wrapped in a large IIFE after bundling.
+Object.assign(window, { setup, draw });

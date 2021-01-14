@@ -28,7 +28,7 @@ Template project for creating [p5.js](https://p5js.org/) sketches using the foll
 
     Now ESLint and Prettier works automatically every time you save your code.
 
-5. Feel free to edit the scripts in `src` directory.
+5. Feel free to edit code in `src` directory.
 
 6. Run the command-line below to build `dist/script.js`:
 

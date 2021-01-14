@@ -4,9 +4,18 @@
     "es6": true,
     "browser": true
   },
-  "extends": ["eslint:recommended", "prettier"],
   "parserOptions": {
     "ecmaVersion": 6,
     "sourceType": "module"
-  }
+  },
+  "extends": [
+    // basic recommended rules
+    "eslint:recommended",
+
+    // overwrite config for p5.js
+    "@fal-works/p5js",
+
+    // turn off rules that might conflict with prettier
+    "prettier"
+  ]
 }

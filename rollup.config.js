@@ -14,11 +14,7 @@ const config = {
     file: "dist/script.js",
     banner,
     interop: "default",
-    globals: {
-      p5: "p5",
-    },
   },
-  external: ["p5"],
 };
 
 export default config;

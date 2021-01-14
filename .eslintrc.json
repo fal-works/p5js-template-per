@@ -1,5 +1,4 @@
 {
-  "ignorePatterns": "dist",
   "env": {
     "es6": true,
     "browser": true
@@ -20,5 +19,15 @@
   ],
   "rules": {
     "lines-around-comment": "error"
-  }
+  },
+
+  "overrides": [
+    {
+      "files": ["rollup.config.js"],
+      "env": {
+        "node": true,
+        "browser": false
+      }
+    }
+  ]
 }

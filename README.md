@@ -10,35 +10,54 @@ See also [other templates](https://fal-works.github.io/p5js-templates/).
 
 ## Usage
 
-1. Install the two below if not yet installed:
-    - [Visual Studio Code](https://code.visualstudio.com/)
-    - [Node.js](https://nodejs.org/)
+### Prepare your environment
 
-2. Create your project folder by copying this template, then open it with VS Code.
+In general, the below only need to be done once.
 
-3. Run the command-line below, which will install several dependencies:
+1. Install the software as follows:
+
+   - [Visual Studio Code](https://code.visualstudio.com/) (VS Code in short)
+   - [Node.js](https://nodejs.org/)
+
+2. Install the VS Code extensions as follows:
+
+    - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)  
+    (from CLI: `code --install-extension esbenp.prettier-vscode`)
+    - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)  
+    (from CLI: `code --install-extension dbaeumer.vscode-eslint`)
+
+### Prepare to create your sketch
+
+Do the below each time you start to create a new sketch using this template.
+
+1. Create your sketch folder by copying this template.
+
+2. Open your sketch folder with VS Code.  
+Then run the following command-line, which installs several package dependencies:
 
     ```shell
     npm install
     ```
 
-4. Install the VS Code extensions:
-    - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-    (from CLI: `code --install-extension dbaeumer.vscode-eslint`)
-    - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)  
-    (from CLI: `code --install-extension esbenp.prettier-vscode`)
+3. Enable the VS Code extensions for Prettier and ESLint (see above), if disabled.
 
-    Now ESLint and Prettier works automatically every time you save your code.
+Now Prettier and ESLint work automatically each time you edit/save your code.  
+If they seem to be not working, reload window of VS Code.
 
-5. Feel free to edit code in `src` directory.
+### Create/edit your sketch
 
-6. Run the command-line below to build `dist/script.js`:
+1. Edit code in `src` directory.
+
+    - If you rename `main.js`, you should reflected that in `rollup.config.js` as well.
+    - Feel free to change anything else.
+
+2. Run the following command-line, which builds `dist/script.js`:
 
     ```shell
     npm run build
     ```
 
-7. Open `dist/index.html` to see the result.
+3. Open `dist/index.html` to see the result.
 
 
 ## Dependencies (npm)

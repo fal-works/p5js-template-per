@@ -1,5 +1,9 @@
 # p5.js Template PER
 
+*Other languages (wiki):* [[ ja ]](https://github.com/fal-works/p5js-template-per/wiki/Readme-ja)
+
+## About
+
 Template project for creating [p5.js](https://p5js.org/) sketches using the following tools:
 
 - Code editor: [Visual Studio Code](https://code.visualstudio.com/)

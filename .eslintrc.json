@@ -1,32 +1,56 @@
 {
+  "ignorePatterns": ["/dist/"],
+
+  // config common to all
   "env": {
-    "es6": true,
-    "browser": true
-  },
-  "parserOptions": {
-    "ecmaVersion": 6,
-    "sourceType": "module"
-  },
-  "extends": [
-    // basic recommended rules
-    "eslint:recommended",
-
-    // overwrite config for p5.js
-    "@fal-works/p5js",
-
-    // turn off rules that might conflict with prettier
-    "prettier"
-  ],
-  "rules": {
-    "lines-around-comment": "error"
+    "es6": true
   },
 
   "overrides": [
+    // config with basic rules
+    {
+      "files": ["src/**/*.js", "rollup.config.js"],
+      "parserOptions": {
+        "sourceType": "module"
+      },
+      "extends": [
+        // basic recommended rules
+        "eslint:recommended",
+
+        // turn off rules that might conflict with Prettier
+        "prettier"
+      ]
+    },
+
+    // config for source code
+    {
+      "files": ["src/**/*.js"],
+      "env": {
+        "browser": true
+      },
+      "extends": [
+        // overwrite config for p5.js
+        "@fal-works/p5js"
+      ]
+    },
+
+    // config for Rollup
     {
       "files": ["rollup.config.js"],
       "env": {
-        "node": true,
-        "browser": false
+        "es2017": true,
+        "node": true
+      }
+    },
+
+    // config just for pre-formatting purpose
+    {
+      "files": ["**/*.js"],
+      "rules": {
+        "lines-around-comment": [
+          "error",
+          { "beforeBlockComment": true, "beforeLineComment": true }
+        ]
       }
     }
   ]
